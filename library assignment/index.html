@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lending library</title>
+    <script src="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="changepanel()" >
+  <main>
+    <!-- Login To System -->
+<div id="loginpanel">
+<h1> Login to Library Account</h1>
+<label>Enter Your userame:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="studentname"><br><br>
+<label>Enter Your Password:</label>&nbsp;&nbsp;
+<input type="password" id="studentpass"><br><br>
+<button type="button" id="loginclick" onclick="login()">Login</button><br><br>
+<label>Not Regestered Yet?</label><br><br>
+<button type="button" id="loginclick" onclick="newregistration()">New Registeration</button>
+<p id="loginresult">           </p>
+
+</div>
+
+<!-- Register Student  -->
+
+<div id="regstudent"> 
+<h1>Register Student</h1>
+
+<label>Enter Student rollno:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="studentrolltxt"><br><br>
+<label>Enter Student Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="studentnametxt"><br><br>
+<label>Enter Student Password:</label>&nbsp;&nbsp;&nbsp;
+<input type="password" id="studentpasstxt"><br><br>
+
+<button type="button" id="btnclick" onclick="addstudent()">Add Student</button>
+<button type="button" id="btnclick" onclick="viewlogin()">Go To Login</button>
+</div>
+<!--desplay Account-->
+
+<div id="afterlogin"> 
+<h1>Welcome To Library</h1><span>&nbsp;<span id="usernamebox"></span>
+<p>Search book by book title or genre name</p>
+<div id="searchdiv"><input type="text" id="booktxt"><button type="button" id="btnclick" onclick="showallbooks()">Search</button></div>
+<div id="booktable">
+  <table id="showallbooks">
+
+
+  </table>
+<br><br>
+<p id="issuedstatus"></p>
+  <table id="issuedbooks">
+<tr>
+  <td>Sr No:</td>
+  <td>Book Name</td>
+  <td>Issue date</td>
+  <td>Due date</td>
+
+  </table>
+
+  <button type="button" id="btnclick" onclick="logout()" > Logout</button>
+   </div>
+
+ </div>
+  </main>
+  <footer>
+    <p>wmdd 4820 lending library 2016</p>
+  </footer>
+
+</body>
+</html>
